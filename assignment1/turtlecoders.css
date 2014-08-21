@@ -1,0 +1,89 @@
+/*
+Default html elements
+*/
+body{
+	background-color: #f4ffe4;
+	color: #333333;
+	font-family: Arial;
+}
+
+header{
+	font-family: Georgia;
+	background-color: #d5edb3;
+	background-image: url("turtle2.gif");
+	background-repeat: no-repeat;
+	background-position: right;
+	text-align: center;
+	text-shadow: 3px 3px 5px #666;
+	border: 1px solid #333333;
+	border-radius: 15px;
+	box-shadow: 5px 5px 5px #828282;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	margin-bottom: 5px;
+}
+
+h1,h2{
+	font: Georgia;
+}
+
+nav{
+	margin-left: 20px;
+}
+
+a:link{
+	background-color: #d5edb3;
+	color: #333333;
+	border: 1px solid #333333;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 5px;
+	margin-right: 5px;
+}
+
+ul{
+	list-style-type: square;
+}
+
+/*
+Class styling
+*/
+.company_name{
+	font-weight: bold;
+}
+
+.motto{
+	font-style: italic;
+	text-align: center;
+	border-style: ridge;
+	border-width: 10px;
+	border-left-width: 40px;
+	border-color: #98bf21; 
+}
+
+/*
+Id styling
+*/
+#intro{
+	text-indent: 20px;
+}
+
+#services{
+	line-height: 1.5;
+}
+
+#wrapper{
+	margin: auto;
+	width: 80%;
+	height: 80%;
+	background-color: #fff;
+	border-top-right-radius: 15px;
+	border-top-left-radius: 15px;
+	min-width: 600px;
+	min-height: 550px;
+}
+
+#content{
+	padding-left: 10px;
+	padding-right: 10px;
+}
