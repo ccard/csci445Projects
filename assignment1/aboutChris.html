@@ -1,47 +1,62 @@
 <!DOCTYPE html>
 <html>
+	<!-- The header is where meta data and linked files are stored to be load with
+	the page-->
 	<head>
-		<title>About Chris</title>
+		<title>About Chris Card</title>
 		<meta name="author" content="Chris Card">
 	</head>
+	<!--Contains the elements of the webpage-->
 	<body>
-		
+		<!--headers are specially formatted elements-->
 		<h1>Introduction</h1>
-		<p>
-		I would like to tell you about <em>my self</em>, what my
+		<!--Paragraphs are used to contain text and other elements-->
+		<p style="margin-left: 10px">
+		I would like to tell you about my self, what my
+		<!--This is an example of a link to an internal element-->
 		<a href="#interests">interests</a> are and what i am
-		<a href="#currentWork">Currently working</a> on.<br>
-		But first i would like to give a bit more detail. I have
-	recieved my BS in CS and mathmatics from <abbr title="Colorado School of Mines">CSM</abbr>
+		<a href="#currentWork">currently working</a> on.<br>
+		But first I would like to give a bit more detail. I have
+		recieved my BS in CS and mathmatics from
+		<!--This is how a hover txt for an abbriviation works-->
+	<abbr title="Colorado School of Mines"><em>CSM</em></abbr>
 	and I am currently a thesis based graduate student focusing on computer
 	vision for the mobile environment.  I am taking this class to expand my
-	knowledge of web programing to help me with my new job at <a href="http://www.microsoft.com/en-us/default.aspx">Microsoft&reg;</a>.
+	knowledge of web programing to help me with my new job at <a href="http://www.microsoft.com/en-us/default.aspx" target="_blank">Microsoft&reg;</a>.
 	</p>
-	<h2> <a id="interests">My Interests</a></h2>
-	<p>
-	My interest span many areas but are not limited to just this list.
-	<br>
-	<ul style="text-align: left; background-color: #24E0FF; border: 4px solid #540CE8; border-radius: 30px">
-		<li>Snowboarding</li>
-		<li>Video games</li>
-		<li>Reading <abbr title="ScienceFiction">SiFi</abbr></li>
-		<li>Programming</li>
-		<li>Computer Vision</li>
-	</ul>
-	</p>
+	<!--Divs are special elements that are used to contain other elements and is the best
+	of formating groups of elements with respect to other elements-->
+	<div style="margin-left: 50px">
+		<h2> <a id="interests">My Interests</a></h2>
+		<p style="margin-left: 10px">
+		My interest span many areas but are not limited to just this list.
+		<br>
+		<!--This is an unordered list that is formated with a blue background and boarder with
+		rounded boarders-->
+		<ul style="text-align: left; background-color: #24E0FF; border: 4px solid #540CE8; border-radius: 10px">
+			<li>Snowboarding</li>
+			<li>Video games</li>
+			<li>Reading <abbr title="ScienceFiction">SiFi</abbr></li>
+			<li>Programming</li>
+			<li>Computer Vision</li>
+		</ul>
+		</p>
+	</div>
 	<hr>
 	<h1> <a id="currentWork">Current Work</a></h1>
-	<p>
+	<p style="margin-left: 10px">
 	My current thesis work involives using computer vision to perform
 	indoor localization on mobile devices.  This is difficult because
-	the indoor environment for example: <br>
-	<image src="http://www.roswellinn.com/wp-content/uploads/2014/08/hallway-5.jpg" width="150" height="160">
+	the indoor environment has sparse local image texture features for example: <br>
+	<div style="margin-left: 100px">
+		<image src="http://www.roswellinn.com/wp-content/uploads/2014/08/hallway-5.jpg" width="150" height="160">
+	</div>
 	<br>
 	This requires the use of line segment intersections and this can be done throught the following code:<br>
-	<div style="border: 1px solid #666; border-radius: 5px">
+	<div style="margin-left: 10px; border: 1px solid #666; border-radius: 5px">
 		<code>
 		bool MyLine::lineIntersection(MyLine other,Point2f&amp; i){<br>
-		<div style="margin-left: 50px">
+		<div style="margin-left: 40px">
 			Mat l1 = lineEq();<br>
 			Mat l2 = other.lineEq();<br>
 			Mat p = l1.cross(l2);<br>
