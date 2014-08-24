@@ -12,8 +12,8 @@ class
 
 .important{
 	position: absolute;
-	right: 10px;
-	top:80px;
+	right: 100px;
+	top:100px;
 	overflow: scroll;
 	max-width: 170px;
 	max-height: 100px;
@@ -32,7 +32,7 @@ class
 .more-important{
 	position: relative;
 	top: -40px;
-	left: 90px;
+	left: 84px;
 	overflow: auto;
 	max-width: 220px;
 	z-index: -1;
