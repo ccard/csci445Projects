@@ -1,0 +1,53 @@
+/*
+tags
+*/
+h1{
+	position: relative;
+	left: 87px;
+}
+
+/*
+class
+*/
+
+.important{
+	position: absolute;
+	right: 10px;
+	top:80px;
+	overflow: scroll;
+	max-width: 170px;
+	max-height: 100px;
+	background-color: #e8930c; 
+}
+
+.not-important{
+	position: relative;
+	overflow: hidden;
+	max-width: 115px;
+	max-height: 100px;
+	background-color: #0dff26;
+	z-index: 1;
+}
+
+.more-important{
+	position: relative;
+	top: -40px;
+	left: 90px;
+	overflow: auto;
+	max-width: 220px;
+	z-index: -1;
+	background-color: #faa1ff;
+}
+
+/*
+Id
+*/
+
+#sidebar{
+	position: fixed;
+	top:30px;
+	left:8px;
+	max-width: 85px;
+	background-color: #95e6ff;
+	color: #8e7ce8;
+}
