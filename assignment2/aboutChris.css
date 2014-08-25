@@ -1,0 +1,76 @@
+/*
+I used CSS transition property on the code-div id to make the text transition
+to a larger font-size
+*/
+
+/*
+ Group
+*/
+body{
+	font-family: "Times New Roman";
+}
+
+div{
+	margin-left: 10px;
+}
+
+h1,h2{
+	font-style: italic;
+}
+
+abbr{
+	font-family: Georgia;
+}
+
+ul{
+	text-align: left;
+}
+
+a.link:hover{
+	font-size: 140%;
+	color: #e80cce;
+}
+
+/*
+ class
+*/
+
+.border-div{
+	border: 1px solid #666; 
+	border-radius: 5px;
+}
+
+.intro{
+	margin-left: 10px;
+}
+/*
+ id
+*/
+
+#interest{
+	margin-left: 50px;
+}
+
+#code-div{
+	margin-left: 10px;
+}
+
+#code-div:hover{
+	-webkit-transition: font-size 2s ease-out;
+	-moz-transition: font-size 2s ease-out;
+	transition: font-size 2s ease-out;
+	font-size: 150%;
+	overflow: scroll;
+	max-height: 310px;
+}
+
+#interior-code{
+	margin-left: 40px;
+}
+
+#head-image{
+	background-image: url("http://fc04.deviantart.net/fs71/f/2012/262/9/8/halo_3__odst_superintendent_avatar_by_chadtalbot-d5f8xbs.gif");
+	background-repeat: repeat;
+	max-height: 128px;
+	height: 128px;
+}

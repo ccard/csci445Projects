@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<!-- The header is where meta data and linked files are stored to be load with
+	the page-->
+	<head>
+		<link rel="stylesheet" type="text/css" href="aboutChris.css"/>
+		<title>About Chris Card</title>
+		<meta name="author" content="Chris Card">
+	</head>
+	<!--Contains the elements of the webpage-->
+	<body>
+		<header>
+		<div id="head-image"/>
+	</header>
+		<!--headers are specially formatted elements-->
+		<h1>Introduction</h1>
+		<!--Paragraphs are used to contain text and other elements-->
+		<p class="intro">
+		I would like to tell you about my self, what my
+		<!--This is an example of a link to an internal element-->
+		<a class="link" href="#interests">interests</a> are and what i am
+		<a class="link" href="#currentWork">currently working</a> on.<br>
+		But first I would like to give a bit more detail. I have
+		recieved my BS in CS and mathmatics from
+		<!--This is how a hover txt for an abbriviation works-->
+	<abbr title="Colorado School of Mines"><em>CSM</em></abbr>
+	and I am currently a thesis based graduate student focusing on computer
+	vision for the mobile environment.  I am taking this class to expand my
+	knowledge of web programing to help me with my new job at <a class="link" href="http://www.microsoft.com/en-us/default.aspx" target="_blank">Microsoft&reg;</a>.
+	</p>
+	<!--Divs are special elements that are used to contain other elements and is the best
+	of formating groups of elements with respect to other elements-->
+	<div id="interest">
+		<h2> <a id="interests">My Interests</a></h2>
+		<p class="intro">
+		My interest span many areas but are not limited to just this list.
+		<br>
+		<!--This is an unordered list that is formated with a blue background and boarder with
+		rounded boarders-->
+		<div class="border-div">
+			<ul>
+				<li>Snowboarding</li>
+				<li>Video games</li>
+				<li>Reading <abbr title="ScienceFiction">SiFi</abbr></li>
+				<li>Programming</li>
+				<li>Computer Vision</li>
+			</ul>
+		</div>
+		</p>
+	</div>
+	<hr>
+	<h1> <a id="currentWork">Current Work</a></h1>
+	<p style="margin-left: 10px">
+	My current thesis work involives using computer vision to perform
+	indoor localization on mobile devices.  This is difficult because
+	the indoor environment has sparse local image texture features for example: <br>
+	<div style="margin-left: 100px">
+		<image src="http://www.roswellinn.com/wp-content/uploads/2014/08/hallway-5.jpg" width="150" height="160">
+	</div>
+	<br>
+	This requires the use of line segment intersections and this can be done throught the following code:<br>
+	<div class="border-div" id="code-div">
+		<code>
+		bool MyLine::lineIntersection(MyLine other,Point2f&amp; i){<br>
+		<div id="interior-code">
+			Mat l1 = lineEq();<br>
+			Mat l2 = other.lineEq();<br>
+			Mat p = l1.cross(l2);<br>
+			pair&lt;Point2f,Point2f&gt; points1 = getPoints();<br>
+			pair&lt;Point2f,Point2f&gt; points2 = other.getPoints();<br>
+			Point2f p1_1 = points1.first;<br>
+			Point2f p1_2 = points1.second;<br>
+			Point2f p2_1 = points2.first;<br>
+			Point2f p2_2 = points2.second;<br>
+			float p_div = (p.at&lt;float&gt;(2,0) == 0 ? 1.f : p.at&lt;float&gt;(2,0));<br>
+			Point2f p_3(p.at&lt;float&gt;(0,0)/p_div,p.at&lt;float&gt;(1,0)/p_div);<br>
+			<br>
+			bool fits = (min(p1_1.x, p1_2.x) &lt;= p_3.x) &amp;&amp; (max(p1_1.x, p1_2.x) &gt;= p_3.x);<br>
+			fits &amp;= (min(p1_1.y, p1_2.y) &lt;= p_3.y) &amp;&amp; (max(p1_1.y, p1_2.y) &gt;= p_3.y);<br>
+			fits &amp;= (min(p2_1.x, p2_2.x) &lt;= p_3.x) &amp;&amp; (max(p2_1.x, p2_2.x) &gt;= p_3.x);<br>
+			fits &amp;= (min(p2_1.y, p2_2.y) &lt;= p_3.y) &amp;&amp; (max(p2_1.y , p2_2.y)&gt;= p_3.y);<br>
+			i = (fits ? p_3 : Point2f(-1.f,-1.f));<br>
+			return fits;<br>
+		</div>
+		}
+		</code>
+	</div>
+	<br>
+	These line segment intersections can be used to calculate the cross-ration of 4
+	colinear points. This cross ration is invariant to scale and perspective making it
+	ideal to use as matching method in images that may not be from the same perspective.
+	If there are any further questions please <a class="link" href="mailto:ccard@mymail.mines.edu?cc=whoff@mines.edu&subject=Help%20with%20image%20processing">email me</a>.
+	</p>
+</body>
+</html>
