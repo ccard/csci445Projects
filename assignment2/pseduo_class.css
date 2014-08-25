@@ -1,0 +1,21 @@
+li{
+	display: inline;
+}
+
+a:link{
+	color: #ff530d;
+}
+
+a:visited{
+	color: #ff0dff;
+	font-size: 70%;
+}
+
+a:hover{
+	font-size: 150%;
+	color: blue;
+}
+
+a:active{
+	color: #e8590c;
+}
