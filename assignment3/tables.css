@@ -4,7 +4,7 @@
 
 /* classes */
 
-.title{
+caption.title{
 	font-size: 160%;
 	margin-bottom: 5px;
 	padding: 5px;
@@ -16,14 +16,47 @@ th.table1-cell,td.table1-cell{
 	border-collapse: collapse;
 }
 
-.heading{
+tr.heading{
 	font-size: 120%;
+}
+
+thead.table2-head th{
+	background-color: #506EFF;
+	text-align: center;
+	border: 2px solid white;
+}
+
+tfoot.table2-foot td{
+	background-color: #D7BEE8;
+	text-align: center;
+	color: blue;
+	border: 2px solid white;
+}
+
+tr.table2-row td{
+	border-bottom: 1px dashed black;
+}
+
+tr.table2-row:last-of-type td{
+	border-bottom: none;
+}
+
+tr.table2-row:first-of-type td{
+	font-weight: bold;
 }
 
 /* ids */
 #schedule{
 	border: 3px solid #6B50FF;
 	border-collapse: collapse;
+	width: 50%;
+}
+
+#table-2{
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
 }
 
 #sched-header{
@@ -34,4 +67,9 @@ th.table1-cell,td.table1-cell{
 	margin-right: auto;
 	margin-left: auto;
 	width: 80%;
+}
+
+#study-group{
+	width: 50%;
+	border-collapse: collapse;
 }
