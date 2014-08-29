@@ -1,0 +1,37 @@
+/* Groups */
+
+
+
+/* classes */
+
+.title{
+	font-size: 160%;
+	margin-bottom: 5px;
+	padding: 5px;
+	font-weight: bold;
+}
+
+th.table1-cell,td.table1-cell{
+	border: 1px solid #6B50FF;
+	border-collapse: collapse;
+}
+
+.heading{
+	font-size: 120%;
+}
+
+/* ids */
+#schedule{
+	border: 3px solid #6B50FF;
+	border-collapse: collapse;
+}
+
+#sched-header{
+	background-color: #D6B0E8;
+}
+
+#table-1{
+	margin-right: auto;
+	margin-left: auto;
+	width: 80%;
+}
