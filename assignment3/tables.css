@@ -1,9 +1,4 @@
-/* Groups */
-
-
-
-/* classes */
-
+/* Global styling */
 caption.title{
 	font-size: 160%;
 	margin-bottom: 5px;
@@ -11,15 +6,33 @@ caption.title{
 	font-weight: bold;
 }
 
+tr.heading{
+	font-size: 120%;
+}
+
+/* table 1 styling */
 th.table1-cell,td.table1-cell{
 	border: 1px solid #6B50FF;
 	border-collapse: collapse;
 }
 
-tr.heading{
-	font-size: 120%;
+#schedule{
+	border: 3px solid #6B50FF;
+	border-collapse: collapse;
+	width: 50%;
 }
 
+#sched-header{
+	background-color: #D6B0E8;
+}
+
+#table-1{
+	margin-right: auto;
+	margin-left: auto;
+	width: 80%;
+}
+
+/*Table 2 styling */
 thead.table2-head th{
 	background-color: #506EFF;
 	text-align: center;
@@ -45,28 +58,11 @@ tr.table2-row:first-of-type td{
 	font-weight: bold;
 }
 
-/* ids */
-#schedule{
-	border: 3px solid #6B50FF;
-	border-collapse: collapse;
-	width: 50%;
-}
-
 #table-2{
 	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 10px;
-}
-
-#sched-header{
-	background-color: #D6B0E8;
-}
-
-#table-1{
-	margin-right: auto;
-	margin-left: auto;
-	width: 80%;
 }
 
 #study-group{
