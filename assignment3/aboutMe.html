@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>About Me</title>
+		<meta name="author" content="Chris Card">
+		<link rel="stylesheet" type="text/css" href="aboutMe.css"/>
+	</head>
+	<body>
+		<div id="form-container">
+			<form id="pii" action="">
+				<fieldset class="core-info">
+					<legend>Personal Information</legend>
+					Name*: <input type="text" size="30px" name="Your Name" required autofocus placeholder="Last, First">
+					Securety Phrase*: <input type="password" name="phrase" required maxlength="8" size="10px">
+					<br>
+					Email*: <input type="email" name="ContactAddress" required autocomplete>
+					Phone: <input  type="tel" name="Phone" pattern="\(\d{3}\)\s?\d{3}\-\d{4}">
+					<br>
+					<!-- Not the Date time picker doesn't show up in FireFox for some reason
+					use Chrome -->
+					Birth Day: <input type="date" name="bday" value="mm-dd-yyyy">
+				</fieldset>
+				<br>
+				<label name="browser">What are your favorite browsers?</label>
+				<br>
+				<input type="checkbox" name="browser" value="FireFox" >FireFox<br>
+				<input type="checkbox" name="browser" value="Explorer">Internet Explorer<br>
+				<input type="checkbox" name="browser" value="chrome" checked="true">Chrome<br>
+				<br>
+				<label name="character">Who is your favorite character?</label>
+				<br>
+				<input type="radio" name="character" value="Master">Master Cheif<br>
+				<input type="radio" name="character" value="Soap">Soap<br>
+				<input type="radio" name="character" value="Luigi" checked="true">Luigi<br>
+				<label name="coolness"> How cool is the character?</label>
+				<label name="coolness">Not</label>
+				<input type="range" name="coolness" step="1" min="0" max="10" value="5">
+				<label name="coolness">Very</label>
+				<br><br>
+				<label>Are you sure their that cool? (0..10)</label>
+				<input type="number" min="0" max="10" step="1" value="2">
+				<br><br>
+				<label>Favorite Activities:</label>
+				<select name="activities" multiple>
+					<option>Mountain Biking</option>
+					<option>Video Games</option>
+					<option>Road Biking</option>
+					<option>Programming</option>
+					<option>Snowboarding</option>
+					<option>Reading</option>
+				</select>
+				<br><br>
+				<label>Favorite Sports Team:</label>
+				<input list="sportsteams" name="favoriteSports">
+				<datalist id="sportsteams">
+				<option>Sea Hawks</option>
+				<option>Broncos</option>
+				<option>Avalanche</option>
+				<option>Rockies</option>
+				<option>Cardinals</option>
+				</datalist>
+				<br><br>
+				Favorite Color: <input type="color" name="fav-color">
+				<br><br>
+				<label>Tell us more about yourself</label><br>
+				<textarea name="moreabout" wrap="soft" cols="100" placeholder="More about you(0-250)" maxlength="250"></textarea>
+				<br><br>
+				<label>WE WILL NOT SHARE OR SELL ANY Personally Identifiable Information OBTAINED FROM YOU WITH ANY OTHER ORGINIZATION</label>
+				<br><br>
+				<input type="submit" value="Submit">
+				<input type="reset" value="Reset">
+			</form>
+		</div>
+	</body>
+</html>
