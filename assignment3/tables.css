@@ -69,3 +69,37 @@ tr.table2-row:first-of-type td{
 	width: 50%;
 	border-collapse: collapse;
 }
+
+/* table 3 styling */
+#table-3{
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+}
+
+#refreshments{
+	width: 50%;
+	border: 5px solid #5264FF;
+	border-collapse: collapse;
+}
+
+tr.table-3-heading{
+	background-color: #5264FF;
+	color: white;
+	text-align: center;
+}
+
+tr.table-3-heading th{
+	width: 100px;
+	height: 30px;
+	font-size: 120%;
+}
+
+tr.table3-row td{
+	border: 2px solid #5264FF;
+}
+
+tr.table3-row:nth-of-type(odd) td{
+	background-color: #E5CEE8;
+}
