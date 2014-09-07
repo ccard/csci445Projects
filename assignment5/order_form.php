@@ -19,14 +19,14 @@
 			} else {
 				$nameErr = "";
 			}
-
 			if(empty($drinks) || !preg_match("/^[+]?\d+$/", $drinks)){
 				$drinksErr = "I am sorry but you can't give us drinks";
 			} else {
 				$drinksErr = "";
 			}
-			if(!empty($drinksErr) && !empty($nameErr)){
-				$destination="processed_form.php?name=$name&drinks=$drinks&drink=$drink";
+			if($drinksErr == "" && $nameErr == ""){
+				$drinksErr="working";
+				$destination = "processed_form.php?name=$name&drink=$drink&drinks=$drinks";
 				header("Location:$destination");
 				exit();
 			}
@@ -43,11 +43,11 @@
 		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
 			Name: <input type="text" name="name" value="<?php echo $name;?>" required>
 			<span class="error">* <?php echo $nameErr;?></span>
-			<br>
+			<br><br>
 			Drink: <input type="number" min="1" name="drinks" value="<?php echo $drinks;?>" required>
 			<span class="error">* <?php echo $drinksErr?></span>
 			<select name="drink" value="<?php echo $drink;?>">
-				<option selected="selected">Coffee</option>
+				<option>Coffee</option>
 				<option>Ripple Fire Water</option>
 				<option>ER espresso shot</option>
 				<option>Troll snot</option>
