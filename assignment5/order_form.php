@@ -10,15 +10,20 @@
 	<?php
 		$nameErr = $drinksErr = "";
 		$name = $drinks = $drink = "";
-		if ($_POST) {
+		if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			$name = clean_input($_POST["name"]);
 			$drinks = clean_input($_POST["drinks"]);
 			$drink = clean_input($_POST["drink"]);
-			if(empty($name) && !preg_match("/^[a-zA-Z]*\'?[a-zA-Z]*$/", $name)){
-				$nameErr = "Customer Name Required";
+			if(empty($name) || !preg_match("/^[a-zA-Z ]*\'?[a-zA-Z ]*$/", $name)){
+				$nameErr = "Only letters, whitespace and ' allowed";
+			} else {
+				$nameErr = "";
 			}
-			if(empty($drinks) && !preg_match("/^[+]?\d+$/", $drinks)){
+
+			if(empty($drinks) || !preg_match("/^[+]?\d+$/", $drinks)){
 				$drinksErr = "I am sorry but you can't give us drinks";
+			} else {
+				$drinksErr = "";
 			}
 			if(!empty($drinksErr) && !empty($nameErr)){
 				$destination="processed_form.php?name=$name&drinks=$drinks&drink=$drink";
@@ -35,7 +40,7 @@
 	?>
 	<body>
 		<h1> Chris's Coffee Shop </h1>
-		<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post">
+		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
 			Name: <input type="text" name="name" value="<?php echo $name;?>" required>
 			<span class="error">* <?php echo $nameErr;?></span>
 			<br>
