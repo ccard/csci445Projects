@@ -67,10 +67,10 @@
 			Drink: <input type="number" min="1" name="drinks" value="<?php echo $drinks;?>" required>
 			<span class="error">* <?php echo $drinksErr?></span>
 			<select name="drink" value="<?php echo $drink;?>">
-				<option>Coffee</option>
-				<option>Ripple Fire Water</option>
-				<option>ER espresso shot</option>
-				<option>Troll snot</option>
+				<option value="Coffee" <?php if($drink == "Coffee") echo "selected=\"selected\""?>>Coffee</option>
+				<option value="Ripple Fire Water" <?php if($drink == "Ripple Fire Water") echo "selected=\"selected\""?>>Ripple Fire Water</option>
+				<option value="ER espresso shot" <?php if($drink == "ER espresso shot") echo "selected=\"selected\""?>>ER espresso shot</option>
+				<option value="Troll snot" <?php if($drink == "Troll snot") echo "selected=\"selected\""?>>Troll snot</option>
 			</select>
 			<br>
 			<input type="submit" name="submit" value="Submit">

@@ -7,12 +7,14 @@
 	<?php
 		$name = $drinks = $drink = "";
 		$tax = 0.04;
+		$price_tx = 0.0;
 		if ($_SERVER["REQUEST_METHOD"] == "GET") {
 			$name = clean_input($_GET["name"]);
 			$drinks = clean_input($_GET["drinks"]);
 			$drink = clean_input($_GET["drink"]);
 			$price = clean_input($_GET["price"]);
-			$price = $price*$tax;
+			$price = $price*$drinks;
+			$price_tx = $price*(1+$tax);
 		}
 		function clean_input($data){
 			$data = trim($data);
@@ -30,6 +32,6 @@
 		<p>Subtotal: $<?php echo $price;?>
 		<br>
 		Total including tax: $<?php echo $price_tx;?></p>
-		<p>Oder processed on <?php date_default_timezone_set("America/Denver"); echo date("l")." ".date("M d Y")." at ".date("h:m a");?></p>
+		<p>Order processed on <?php date_default_timezone_set("America/Denver"); echo date("l")." ".date("M d")." at ".date("h:m a");?></p>
 	</body>
 </html>
