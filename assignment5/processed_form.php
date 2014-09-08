@@ -7,13 +7,12 @@
 	<?php
 		$name = $drinks = $drink = "";
 		$tax = 0.04;
-		$price = mt_rand(3,5);
-		$price_tx = $price*(1+$tax);
 		if ($_SERVER["REQUEST_METHOD"] == "GET") {
 			$name = clean_input($_GET["name"]);
 			$drinks = clean_input($_GET["drinks"]);
 			$drink = clean_input($_GET["drink"]);
-
+			$price = clean_input($_GET["price"]);
+			$price = $price*$tax;
 		}
 		function clean_input($data){
 			$data = trim($data);
