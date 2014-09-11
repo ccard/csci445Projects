@@ -58,7 +58,7 @@
 			}
 		?>
 		<h1>Chris's Coffee Shop</h1>
-		<p id="order_head">Customer Orders</p>
+		<p id="order_head">Customer Orders:</p>
 		<div id="order_detail">
 			<?php generate_detail_page($orders); ?>
 		</div>

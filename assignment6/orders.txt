@@ -6,3 +6,5 @@ Ron	Thursday Sep 11 at 03:09 pm	1	Coffee	3.432
 Ron	Thursday Sep 11 at 03:09 pm	2	Ripple Fire Water	9.36
 Chris	Thursday Sep 11 at 03:09 pm	2	Troll snot	1.04
 Chris	Thursday Sep 11 at 04:09 pm	2	Coffee	6.864
+Chris	Thursday Sep 11 at 04:09 pm	2	Coffee	6.864
+Zander	Thursday Sep 11 at 04:09 pm	3	Ripple Fire Water	14.04

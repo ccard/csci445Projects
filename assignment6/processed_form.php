@@ -32,9 +32,9 @@
 			$newline = (file_exists("orders.txt") ? "\n" : "");
 			$file = fopen("orders.txt", "a");
 			$string = $newline.$name."\t".$date."\t".$drinks."\t".$drink."\t".$price;
-			fwrite($file, $string);
+			$result = fwrite($file, $string);
 			fclose($file);
-			echo "<p>Order Saved!</p>";
+			return $result;
 		}
 	?>
 	<body>
@@ -46,9 +46,7 @@
 			<br>
 			Total including tax: $<?php echo $price_tx;?></p>
 			<p>Order processed on <?php echo $date?></p>
-			<br>
-			<?php save_order($name,$date,$drinks,$drink,$price_tx); ?>
-			<br>
+			<?php echo "<p>".(save_order($name,$date,$drinks,$drink,$price_tx) === false ? "Failed to Save!" : "Order Saved!")."</p>"; ?>
 			<a id="all oders link" href="view_all_orders.php">View All Orders</a>
 		</div>
 	</body>
