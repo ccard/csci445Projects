@@ -12,7 +12,7 @@
 			function load_orders(){
 				$orders = array();
 				ini_set('auto_detect_line_endings',true);
-				$file = fopen("orders.txt","r") or die("The oders.txt file doesn't exist or cant be opened");
+				$file = fopen("orders.txt","r") or die("The orders.txt file doesn't exist or cant be opened");
 				while (!feof($file)) {
 					$line = fgetcsv($file,0,"\t");
 					if(sizeof($line) === 0 || $line[0] == "") continue;
