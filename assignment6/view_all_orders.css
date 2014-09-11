@@ -1,0 +1,22 @@
+.cust_order{
+	margin-left: 25px;
+	border-bottom: 2px solid #000;
+}
+
+.name_sp{
+	font-weight: bold;
+}
+
+.customer_total,.cust_title{
+	font-size: 120%;
+}
+
+.grand_total{
+	font-size: 130%;
+}
+
+#order_head{
+	font-size: 140%;
+	font-weight: bold;
+	margin-left: 10px;
+}
