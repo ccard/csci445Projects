@@ -46,7 +46,7 @@
 			<br>
 			Total including tax: $<?php echo number_format($price_tx,2);?></p>
 			<p>Order processed on <?php echo $date?></p>
-			<?php echo "<p>".(save_order($name,$date,$drinks,$drink,$price_tx) === false ? "Failed to Save!" : "Order Saved!")."</p>"; ?>
+			<?php echo "<p>".(save_order($name,$date,$drinks,$drink,$price_tx) === false ? "Could not write to order file at this time!" : "Order Written!")."</p>"; ?>
 			<a id="all_orders_link" href="view_all_orders.php">View All Orders</a>
 		</div>
 	</body>
