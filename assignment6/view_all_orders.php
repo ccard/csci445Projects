@@ -15,7 +15,7 @@
 				$file = fopen("orders.txt","r") or die("The oders.txt file doesn't exist or cant be opened");
 				while (!feof($file)) {
 					$line = fgetcsv($file,0,"\t");
-					if(sizeof($line) === 0) continue;
+					if(sizeof($line) === 0 || $line[0] == "") continue;
 					if(array_key_exists($line[0], $orders)){
 						$tmp = array("Date"=>$line[1], "Drinks"=>$line[2],
 							"Drink"=>$line[3],"Price"=>$line[4]);
@@ -35,7 +35,8 @@
 
 			function generate_detail_page($orders) {
 				if(sizeof($orders) == 0){
-					trigger_error("No orders have been loaded!");
+					echo "<p style=\"font-size: 200%; color: #FF0000;
+								margin-left: 20px;\">There are no orders to load!</p>";
 					return;
 				}
 				$grand_total = 0;
