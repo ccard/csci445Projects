@@ -47,15 +47,15 @@
 					echo "<ul>";
 					for ($i=0; $i < sizeof($value); $i++) { 
 						$total += $value[$i]["Price"];
-						$tmp = "On ".$value[$i]["Date"]." ordered ".$value[$i]["Drinks"]." ".$value[$i]["Drink"]." Total: \$".$value[$i]["Price"];
+						$tmp = "On ".$value[$i]["Date"]." ordered ".$value[$i]["Drinks"]." ".$value[$i]["Drink"]." Total: \$".number_format($value[$i]["Price"],2);
 						echo "<li class=\"order_item\">".$tmp."</li>";
 					}
 					echo "</ul>";
-					echo "<p class=\"customer_total\">Customer total: \$".$total."</p><br>";
+					echo "<p class=\"customer_total\">Customer total: \$".number_format($total,2)."</p><br>";
 					$grand_total += $total;
 					echo "</div>";
 				}
-				echo "<p class=\"grand_total\">Grand total: \$".$grand_total."</p>";
+				echo "<p class=\"grand_total\">Grand total: \$".number_format($grand_total,2)."</p>";
 			}
 		?>
 		<h1>Chris's Coffee Shop</h1>

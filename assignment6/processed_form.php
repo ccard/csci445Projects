@@ -17,7 +17,7 @@
 			$drink = clean_input($_GET["drink"]);
 			$price = get_price($products,$drink);
 			$price = $price*$drinks;
-			$price_tx = $price*(1+$tax);
+			$price_tx = round($price*(1+$tax),2);
 			date_default_timezone_set("America/Denver");
 			$date = date("l")." ".date("M d")." at ".date("h:m a");
 			$date = clean_input($date);
@@ -31,7 +31,7 @@
 		function save_order($name,$date,$drinks,$drink,$price){
 			$newline = (file_exists("orders.txt") ? "\n" : "");
 			$file = fopen("orders.txt", "a");
-			$string = $newline.$name."\t".$date."\t".$drinks."\t".$drink."\t".$price;
+			$string = $newline.$name."\t".$date."\t".$drinks."\t".$drink."\t".round($price,2);
 			$result = fwrite($file, $string);
 			fclose($file);
 			return $result;
@@ -42,9 +42,9 @@
 		<div id="content">
 			<p> <?php echo $name?> thank you for visiting Chris's Coffe shop. Thank you for odering
 			<?php echo "\"$drink\"";?> we hope you have a great day!</p>
-			<p>Subtotal: $<?php echo $price;?>
+			<p>Subtotal: $<?php echo number_format($price,2);?>
 			<br>
-			Total including tax: $<?php echo $price_tx;?></p>
+			Total including tax: $<?php echo number_format($price_tx,2);?></p>
 			<p>Order processed on <?php echo $date?></p>
 			<?php echo "<p>".(save_order($name,$date,$drinks,$drink,$price_tx) === false ? "Failed to Save!" : "Order Saved!")."</p>"; ?>
 			<a id="all_orders_link" href="view_all_orders.php">View All Orders</a>
