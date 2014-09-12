@@ -27,7 +27,6 @@
 	}
 
 	function get_product_options($products,$drink){
-		$htm = "";
 		$keys = array_keys($products);
 		if(sizeof($keys) === 0) trigger_error("The products haven't been loaded");
 		for ($i=0; $i < sizeof($keys); $i++) { 
