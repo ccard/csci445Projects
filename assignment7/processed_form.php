@@ -40,20 +40,20 @@
 			if (mysqli_connect_errno()) {
 				die ("Connection faild: ".mysqli_connect_errno()."\n");
 				trigger_error("Failed to connect ot sql db");
-				exit;
+				$result = false;
 			}
+			else{
+				$stmt = $mysqli->prepare("INSERT INTO Orders(Customer,Quantity,Prod,Price,D) VALUES (?,?,?,?,?)");
+				$stmt->bind_param('siids',$name,$drinks,$id,$price,$date);
 
-			$stmt = $mysqli->prepare("INSERT INTO Orders(Customer,Quantity,Prod,Price,D) VALUES (?,?,?,?,?)");
-			$stmt->bind_param('siids',$name,$drinks,$id,$price,$date);
+				$id = getID($products,$drink);
+				$price = round($price,2);
 
-			$id = getID($products,$drink);
-			$price = round($price,2);
+				$stmt->execute();
+				$stmt->close();
 
-			$stmt->execute();
-			$stmt->close();
-
-			mysqli_close($mysqli);
-
+				mysqli_close($mysqli);
+			}
 			return $result;
 		}
 	?>
