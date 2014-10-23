@@ -13,5 +13,15 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+	return Redirect::to('quotes');
 });
+
+Route::get('quotes', function ()
+{
+	return View::make('quotes_home')->with('quotes_num', 9000);
+});
+
+Route::get('quotes/{id}', function($id)
+{
+	return "Quotes $id";
+})->where('id','[0-9]+');

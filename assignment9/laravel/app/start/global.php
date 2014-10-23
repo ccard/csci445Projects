@@ -1,5 +1,10 @@
 <?php
 
+App::missing(function()
+{
+	return Response::make("Page not found", 404);
+});
+
 /*
 |--------------------------------------------------------------------------
 | Register The Laravel Class Loader
